@@ -1,0 +1,48 @@
+﻿  lessone3.cpp
+c:\users\user\desktop\irox-קורס\c++\lessone3\lessone3\mainsimulator.h(7): warning C4005: 'N': macro redefinition
+  c:\users\user\desktop\irox-קורס\c++\lessone3\lessone3\camera.h(6): note: see previous definition of 'N'
+  MainSimulator.cpp
+c:\users\user\desktop\irox-קורס\c++\lessone3\lessone3\mainsimulator.h(7): warning C4005: 'N': macro redefinition
+  c:\users\user\desktop\irox-קורס\c++\lessone3\lessone3\camera.h(6): note: see previous definition of 'N'
+c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(238): error C2672: 'std::invoke': no matching overloaded function found
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(246): note: see reference to function template instantiation 'void std::_LaunchPad<_Target>::_Execute<0,1>(std::tuple<void (__thiscall Camera::* )(void),int> &,std::integer_sequence<unsigned int,0,1>)' being compiled
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__thiscall Camera::* )(void),int>,std::default_delete<std::tuple<void (__thiscall Camera::* )(void),int>>>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(245): note: see reference to function template instantiation 'void std::_LaunchPad<_Target>::_Execute<0,1>(std::tuple<void (__thiscall Camera::* )(void),int> &,std::integer_sequence<unsigned int,0,1>)' being compiled
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__thiscall Camera::* )(void),int>,std::default_delete<std::tuple<void (__thiscall Camera::* )(void),int>>>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(242): note: while compiling class template member function 'void std::_LaunchPad<_Target>::_Run(std::_LaunchPad<_Target> *) noexcept'
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__thiscall Camera::* )(void),int>,std::default_delete<std::tuple<void (__thiscall Camera::* )(void),int>>>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(230): note: see reference to function template instantiation 'void std::_LaunchPad<_Target>::_Run(std::_LaunchPad<_Target> *) noexcept' being compiled
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__thiscall Camera::* )(void),int>,std::default_delete<std::tuple<void (__thiscall Camera::* )(void),int>>>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(257): note: see reference to class template instantiation 'std::_LaunchPad<_Target>' being compiled
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__thiscall Camera::* )(void),int>,std::default_delete<std::tuple<void (__thiscall Camera::* )(void),int>>>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thread(46): note: see reference to function template instantiation 'void std::_Launch<std::unique_ptr<std::tuple<void (__thiscall Camera::* )(void),int>,std::default_delete<_Ty>>>(_Thrd_t *,_Target &&)' being compiled
+          with
+          [
+              _Ty=std::tuple<void (__thiscall Camera::* )(void),int>,
+              _Target=std::unique_ptr<std::tuple<void (__thiscall Camera::* )(void),int>,std::default_delete<std::tuple<void (__thiscall Camera::* )(void),int>>>
+          ]
+  c:\users\user\desktop\irox-קורס\c++\lessone3\lessone3\mainsimulator.cpp(27): note: see reference to function template instantiation 'std::thread::thread<void(__thiscall Camera::* )(void),int&,void>(_Fn &&,int &)' being compiled
+          with
+          [
+              _Fn=void (__thiscall Camera::* )(void)
+          ]
+c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(237): error C2893: Failed to specialize function template 'unknown-type std::invoke(_Callable &&,_Types &&...) noexcept(<expr>)'
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(237): note: With the following template arguments:
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(237): note: '_Callable=void (__thiscall Camera::* )(void)'
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\thr\xthread(237): note: '_Types={int}'
+  Generating Code...
