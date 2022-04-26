@@ -8,7 +8,8 @@
 class Camera
 {
 	char id;
-	BaseMessage** messages=nullptr;
+	BaseMessage** messages=NULL;
+	int numOfMessages = 0;
 	int indexInArr = 0;
 	Buffer* myBuffer;
 	bool isActive;
@@ -20,6 +21,8 @@ public:
 	void SendToBuffer();
 	void Run();
 	void Stop();
-
+	unsigned char** GetBufferValue();
+	int GetnumOfMessages();
+	
 };
 

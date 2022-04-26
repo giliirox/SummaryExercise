@@ -4,8 +4,8 @@
 #include <stdlib.h>
 class Buffer
 {
-	unsigned char** buffer;
-	int last = -1;
+	unsigned char** buffer=NULL;
+	int last =0;
 public:
 	Buffer();
 	~Buffer();

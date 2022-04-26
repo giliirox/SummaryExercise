@@ -4,5 +4,7 @@
 #include "MainSimulator.h"
 int main()
 {
-	//MainSimulator* mySim = new MainSimulator();
+	MainSimulator* mySim = new MainSimulator();
+	mySim->RunAllCameras();
+	mySim->PrintDataFromAllCameras();
 }

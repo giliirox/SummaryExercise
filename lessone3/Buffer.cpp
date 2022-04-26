@@ -14,20 +14,10 @@ Buffer::~Buffer()
 {
 }
 
-void Buffer::AddToBuffer(unsigned char * newMessage)
+void Buffer :: AddToBuffer(unsigned char * newMessage)
 {
-	
-	if (buffer == nullptr)
-	{
-		buffer = (unsigned char**)malloc(sizeof(char*));
-	}
-	else
-	{
-	realloc(buffer,sizeof(buffer)+ sizeof(char*));
-	}
-	last++;
-	buffer[last]=newMessage;
-	
+       buffer = (unsigned char**)realloc(buffer,sizeof( unsigned char*)*++last);
+	   buffer[last-1]=newMessage;
 }
 
 unsigned char ** Buffer::GetBuffer()

@@ -40,30 +40,26 @@ DiscoverMessage * createDetectionMessage()
 
 void Camera::Generate()
 {
-	int numOfMessages = rand() % 5 + 1;
-	for (int i = 0; i < numOfMessages; i++)
+	int numOfMessagesToDo = rand() % 10 + 1;
+	
+	for (int i = 0; i < numOfMessagesToDo; i++)
 	{
-		if (!messages)
-		{
-			messages = (BaseMessage**)malloc(sizeof(BaseMessage*));
-		}
-		else {
-			realloc(messages, sizeof(BaseMessage*)*indexInArr + 2);
-			indexInArr++;
-		}
-		rand() % 2 + 1 == 1 ? messages[indexInArr] = (BaseMessage*)createStatusMessage() : messages[indexInArr] = createDetectionMessage();
+			messages= (BaseMessage**)realloc(messages, sizeof(BaseMessage*)*(indexInArr + 1));
+		rand() % 2 + 1 == 1 ? messages[indexInArr++] = (BaseMessage*)createStatusMessage() : messages[indexInArr++] = createDetectionMessage();
 	}
 }
 
 void Camera::SendToBuffer()
 {
-	for (int i = 0; i < indexInArr+1; i++)
+	for (int i = 0; i < indexInArr; i++)
 	{	
 		messages[i]->parseBack();
 		myBuffer->AddToBuffer(messages[i]->getMessageBuffer());
 		free(messages[i]);
 	}
 	free(messages);
+	messages = NULL;
+	numOfMessages += indexInArr;
 	indexInArr = 0;
 }
 
@@ -71,11 +67,23 @@ void Camera::Run()
 {
 	while (isActive) {
 		Generate();
+		
 		SendToBuffer();
+		
 	}
 }
 
 void Camera::Stop()
 {
 	isActive = false;
+}
+
+unsigned char ** Camera::GetBufferValue()
+{
+	return myBuffer->GetBuffer();
+}
+
+int Camera::GetnumOfMessages()
+{
+	return numOfMessages;
 }
