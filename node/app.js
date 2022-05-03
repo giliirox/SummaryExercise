@@ -1,24 +1,8 @@
-// const express = require("express");
-// const path = require("path");
-
-
-// const app = express();
-// const port = process.env.PORT || "8000";
-
-
-// app.listen(port, () => {
-//     console.log(`Listening to requests on http://localhost:${port}`);
-//   });
-
-//   app.get("/", (req, res) => {
-//     res.status(200).send("WHATABYTE: Food For Devs");
-//   });
-
 
 // Include Nodejs' net module.
 const Net = require('net');
 // The port on which the server is listening.
-const port = 8000;
+const port = 8080;
 
 // Use net.createServer() in your code. This is just for illustration purpose.
 // Create a new TCP server.
@@ -40,8 +24,7 @@ server.on('connection', function(socket) {
 
     // The server can also receive data from the client by reading from its socket.
     socket.on('data', function(chunk) {
-        console.log(`Data received from client: ${chunk.toString()}`)
-        console.log(chunk.toJSON());
+        console.log(`Data received from client: ${chunk.toString()}`) 
     });
 
     // When the client requests to end the TCP connection with the server, the server
@@ -56,5 +39,12 @@ server.on('connection', function(socket) {
         console.log(`Error: ${err}`);
     });
 });
+const convert1=(req,res)=>{
+if(req[0]==0)
+{
+
+}
+else
+}
 
 

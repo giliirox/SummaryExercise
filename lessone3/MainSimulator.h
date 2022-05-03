@@ -4,10 +4,10 @@
 #include <iostream>
 #include <stdlib.h>
 
-#define N 4
+#define NUMBER1 4
 class MainSimulator
 {
-	Camera** CamerasArr;
+	Camera* CamerasArr[NUMBER1];
 public:
 	MainSimulator();
 	~MainSimulator();

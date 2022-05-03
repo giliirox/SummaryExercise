@@ -4,9 +4,10 @@
 #include <stdlib.h>
 class Buffer
 {
-	unsigned char** buffer=NULL;
-	int last =0;
+	unsigned char** buffer=nullptr;
+	
 public:
+	int last =0;
 	Buffer();
 	~Buffer();
 	void AddToBuffer(unsigned char* newMessage);

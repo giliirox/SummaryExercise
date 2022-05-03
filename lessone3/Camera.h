@@ -3,7 +3,7 @@
 #include "StatusMessage.h"
 #include "DiscoverMessage.h"
 #include "Buffer.h"
-#define N 4
+#define NUMBER1 4
 
 class Camera
 {
@@ -23,6 +23,7 @@ public:
 	void Stop();
 	unsigned char** GetBufferValue();
 	int GetnumOfMessages();
-	
+	void SendToServer();
+
 };
 
