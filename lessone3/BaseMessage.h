@@ -2,7 +2,7 @@
 class BaseMessage
 {
       protected:
-		  unsigned char* messageBuffer;
+		   char* messageBuffer;
 		  int messageId;
 		  int messageType;
 
@@ -16,7 +16,7 @@ public:
 	virtual void parseBack() = 0;
 	virtual void print() = 0;
 
-	unsigned char* getMessageBuffer();
+	 char* getMessageBuffer();
 
 };
 

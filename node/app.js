@@ -1,5 +1,7 @@
 
+
 // Include Nodejs' net module.
+const { type } = require('express/lib/response');
 const Net = require('net');
 // The port on which the server is listening.
 const port = 8080;
@@ -25,6 +27,7 @@ server.on('connection', function(socket) {
     // The server can also receive data from the client by reading from its socket.
     socket.on('data', function(chunk) {
         console.log(`Data received from client: ${chunk.toString()}`) 
+        convertAndPrint(chunk);
     });
 
     // When the client requests to end the TCP connection with the server, the server
@@ -39,12 +42,32 @@ server.on('connection', function(socket) {
         console.log(`Error: ${err}`);
     });
 });
-const convert1=(req,res)=>{
-if(req[0]==0)
-{
 
-}
-else
+function convertAndPrint(data) {
+    console.log("in function")
+    let mes={};
+    mes.type= Buffer.from(data).readInt8(0);
+    if( mes.type==1)
+        {
+        mes.status=Buffer.from(data).readInt8(2);
+        console.log("=====================================")
+        console.log(`type:${mes.type}`)
+        console.log(`status:${mes.status}`)
+        console.log("=====================================")
+        }
+    else
+        {  
+        mes.distance=Buffer.from(data).readFloatBE(2);
+        mes.angle=Buffer.from(data).readFloatBE(6);
+        mes.speed=Buffer.from(data).readFloatBE(10);
+        console.log("=====================================")
+        console.log(`type: ${mes.type}`)
+        console.log(`distance: ${mes.distance}`)
+        console.log(`angle: ${mes.angle}`)
+        console.log(`speed: ${mes.speed} `)
+        console.log("=====================================")
+        }
+   
 }
 
 

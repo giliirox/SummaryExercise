@@ -18,7 +18,7 @@ void StatusMessage::parseMessage()
 
 void StatusMessage::parseBack()
 {
-	this->messageBuffer =(unsigned char*) malloc(sizeof(char) * 3);
+	this->messageBuffer =( char*) malloc(sizeof(char) * 3);
 	std::memcpy(this->messageBuffer, &(this->messageType), 2);
 	std::memcpy(this->messageBuffer + 2, &(this->status), 1);
 }

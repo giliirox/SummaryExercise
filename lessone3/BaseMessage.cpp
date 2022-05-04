@@ -17,7 +17,7 @@ BaseMessage::~BaseMessage()
 {
 }
 
-unsigned char* BaseMessage::getMessageBuffer()
+ char* BaseMessage::getMessageBuffer()
 {
 	return this->messageBuffer;
 }

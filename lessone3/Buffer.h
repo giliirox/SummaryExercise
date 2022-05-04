@@ -4,14 +4,14 @@
 #include <stdlib.h>
 class Buffer
 {
-	unsigned char** buffer=nullptr;
+	 char** buffer=nullptr;
 	
 public:
 	int last =0;
 	Buffer();
 	~Buffer();
-	void AddToBuffer(unsigned char* newMessage);
-	unsigned char** GetBuffer();
+	void AddToBuffer( char* newMessage);
+	 char** GetBuffer();
 	void CleanBuffer();
 
 };

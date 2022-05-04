@@ -47,7 +47,7 @@ void DiscoverMessage::parseMessage()
 void DiscoverMessage::parseBack()
 {
 
-	this->messageBuffer = (unsigned char*)malloc(sizeof(char) * 14);
+	this->messageBuffer = ( char*)malloc(sizeof(char)*14);
 	std::memcpy( this->messageBuffer, &(this->messageType), 2);
 	std::memcpy(this->messageBuffer + 2, &(this->distance), 4);
 	std::memcpy(this->messageBuffer + 6, &(this->angle), 4);

@@ -90,7 +90,7 @@ void Camera::Stop()
 	isActive = false;
 }
 
-unsigned char ** Camera::GetBufferValue()
+ char ** Camera::GetBufferValue()
 {
 	return myBuffer->GetBuffer();
 }
@@ -123,9 +123,9 @@ void Camera::SendToServer()
 		if (connect(connection, (SOCKADDR*)&addr, addrLen) == 0) {
 			cout << "Connected!" << endl;
 
-			for (int i = 0; i < 2; i++)
+			for (int k = 0; k < 4; k++)
 			{
-				getInput = (char*)myBuffer->GetBuffer()[i];
+				getInput = (char *)myBuffer->GetBuffer()[k];
 				send(connection, getInput.c_str(), getInput.length(), 0);
 			}
 		

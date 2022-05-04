@@ -15,14 +15,14 @@ Buffer::~Buffer()
 {
 }
 
-void Buffer :: AddToBuffer(unsigned char * newMessage)
+void Buffer :: AddToBuffer( char * newMessage)
 {
-       buffer = (unsigned char**)realloc(buffer,sizeof( unsigned char*)*++last);
-	   buffer[last-1]= (unsigned char*)malloc(strlen((char*)newMessage));
+       buffer = ( char**)realloc(buffer,sizeof(  char*)*++last);
+	   buffer[last-1]= ( char*)malloc(strlen((char*)newMessage));
 	   strcpy((char*)buffer[last - 1], (char*)newMessage);
 }
 
-unsigned char ** Buffer::GetBuffer()
+ char ** Buffer::GetBuffer()
 {
 	return buffer;
 }
